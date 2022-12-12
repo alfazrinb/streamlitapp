@@ -39,13 +39,6 @@ with header:
 #     #        inplace=True)
 
 
-# with Exploratory:
-# 	st.header('Data Visualisasi')
-
-
-
-
-
 
 
 # loading the saved model
@@ -206,7 +199,7 @@ def main():
     
     # creating a button for Prediction
     
-    if st.button('Prediksi'):
+    if st.button('SUBMIT'):
         prediksi = mutasi_prediction([FreqJamDiklat, NamaJabatan, SatkerInduk, MasaKerja,
        KodePangkat, NamaJurusan, NamaPendidikan])
         
