@@ -14,27 +14,11 @@ Exploratory = st.beta_container()
 modelTraining = st.beta_container()
 
 with header:
-    st.title('Portal Prediksi Mutasi Pegawai BPK RI')
+#     st.title('Portal Prediksi Mutasi Pegawai BPK RI')
     # st.subheader('Untuk Masyarakat Kelas Ekonomi Menengah Kebawah')
 
     image = Image.open('BC5.png')
     st.image(image, caption='')
-
-# with dataset:
-# 	st.header('Gambaran Umum Data')
-# 	st.text('Dataset ini di ambil per tanggal 17 November 2020')
-#     dt = pd.read_excel('data_ready_dummy.csv')
-#     # dt = pd.read_csv('data_ready_dummy.csv')
-#     # dt.drop(['Unnamed: 0','NipBaru'], axis = 1, inplace = True)
-#     # data = dt.dropna()
-#     # data['KodePangkat'].replace([1,2,3,4,5,6,7,8,9,10,11,12,13], 
-#     #        ['I/D',"II/B","II/C","II/D","III/A","III/B","III/C","III/D","IV/A","IV/B","IV/C","IV/D","IV/E"], 
-#     #        inplace=True)
-#     # data['NamaPendidikan'].replace([1,2,3,4,5,6,7,8,9], 
-#     #        ["SD","SMP","SMA","D1","D2","D3","S1/D4","S2","S3"], 
-#     #        inplace=True)
-
-
 
 
 # loading the saved model
@@ -58,7 +42,23 @@ loaded_model = pickle.load(open('trained_model_fix_banget.sav', 'rb'))
 #       return 'Pegawai Tidak Mutasi'
 #     else:
 #       return 'Pegawai Di Mutasi'
-  
+
+import base64
+def add_bg_from_local(image_file):
+    with open(image_file, "rb") as image_file:
+        encoded_string = base64.b64encode(image_file.read())
+    st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background-image: url(data:image/{"jpeg"};base64,{encoded_string.decode()});
+        background-size: cover
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+    )
+add_bg_from_local('BC6.jpeg')       
   
 def main():
     
