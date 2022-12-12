@@ -17,8 +17,8 @@ with header:
     st.title('Portal Prediksi Mutasi Pegawai BPK RI')
     # st.subheader('Untuk Masyarakat Kelas Ekonomi Menengah Kebawah')
 
-    image = Image.open('cropped-Logo-BPK-icon.png')
-    st.image(image, caption='')
+#     image = Image.open('cropped-Logo-BPK-icon.png')
+#     st.image(image, caption='')
 
 # st.title('Portal Prediksi Mutasi Pegawai BPK RI')
 # image = Image.open('cropped-Logo-BPK-icon.png')
