@@ -49,7 +49,7 @@ with header:
 
 
 # loading the saved model
-loaded_model = pickle.load(open('D:\\Alfa\\Alfa\\BPK\\DAC\\trained_model_fix_banget.sav', 'rb'))
+loaded_model = pickle.load(open('D:\\Alfa\\Alfa\\BPK\\DAC\\DAC\\trained_model_fix_banget.sav', 'rb'))
 
 # def mutasi_prediction(input_data):
 
